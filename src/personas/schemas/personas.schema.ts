@@ -1,6 +1,8 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 
-
+export enum Category{
+    ADVENTURE='Adventure',
+}
 
 @Schema({
     timestamps:true,
@@ -14,7 +16,7 @@ export class Personas{
     @Prop()
     ApellidoMaterno:string;
     @Prop()
-    Sexo:string;
+    Sexo:Category;
 
 }
 
